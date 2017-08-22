@@ -3,7 +3,7 @@ package com.kodilla.testing.collection;
 import java.util.ArrayList;
 
 public class OddNumbersExterminator {
-    public static void main(String[] args) {
+    public ArrayList<Integer> allNumbers() {
         ArrayList<Integer> evenNumbers = new ArrayList<Integer>();
 
         ArrayList<Integer>numbers=new ArrayList<Integer>();
@@ -13,5 +13,10 @@ public class OddNumbersExterminator {
                 evenNumbers.add(n);
             }
         }
+        return evenNumbers;
     }
 }
+
+
+
+
