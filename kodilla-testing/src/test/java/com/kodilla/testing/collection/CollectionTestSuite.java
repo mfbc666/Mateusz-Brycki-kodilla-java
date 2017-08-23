@@ -16,9 +16,11 @@ public class CollectionTestSuite {
     }
     @Test
     public void testOddNumbersExterminatorNormalList (){
+        int l =0;
 
         //Given
         ArrayList<Integer> testOddNumbersExterminatorNormalList  = new ArrayList();
+
 
         //When
         for (int i = 0; i < evenNumbers.size();i++){
@@ -26,16 +28,17 @@ public class CollectionTestSuite {
         }
 
         //Then
-        int i =0;
-        Assert.assertTrue(testOddNumbersExterminatorNormalList.add( evenNumbers.get(i)) %2 == 0 );
-        i++;
+        Assert.assertTrue(testOddNumbersExterminatorNormalList.add( evenNumbers.get(l)) %2 == 0 );
+        l++;
     }
 
     @Test
     public void testOddNumbersExterminatorEmptyList(){
+        int k =0;
 
         //Given
         ArrayList<Integer>testOddNumbersExterminatorEmptyList = new ArrayList();
+
 
         //When
         for(int n = 0; n < 100000; n++){
@@ -45,9 +48,8 @@ public class CollectionTestSuite {
             }
         }
         //Then
-        int i =0;
-        Assert.assertTrue(testOddNumbersExterminatorEmptyList.add( evenNumbers.get(i)) %2 == 0 );
-        i++;
+        Assert.assertTrue(testOddNumbersExterminatorEmptyList.add( evenNumbers.get(k)) %2 == 0 );
+        k++;
     }
 }
 
