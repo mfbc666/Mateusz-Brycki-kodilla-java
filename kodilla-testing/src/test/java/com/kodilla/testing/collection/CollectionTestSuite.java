@@ -1,5 +1,5 @@
+
 package com.kodilla.testing.collection;
-import com.kodilla.testing.collection.OddNumbersExterminator;
 import org.junit.*;
 
 import java.util.ArrayList;
@@ -15,41 +15,46 @@ public class CollectionTestSuite {
         System.out.println("End : Test of Odd number exterminate engine");
     }
     @Test
-    public void testOddNumbersExterminatorNormalList (){
-        int l =0;
+    public void testOddNumbersExterminatorList (){
 
         //Given
-        ArrayList<Integer> testOddNumbersExterminatorNormalList  = new ArrayList();
-
-
-        //When
-        for (int i = 0; i < evenNumbers.size();i++){
-            testOddNumbersExterminatorNormalList.add(evenNumbers.get(i));
-        }
-
-        //Then
-        Assert.assertTrue(testOddNumbersExterminatorNormalList.add( evenNumbers.get(l)) %2 == 0 );
-        l++;
-    }
-
-    @Test
-    public void testOddNumbersExterminatorEmptyList(){
-        int k =0;
-
-        //Given
-        ArrayList<Integer>testOddNumbersExterminatorEmptyList = new ArrayList();
-
-
-        //When
-        for(int n = 0; n < 100000; n++){
-            testOddNumbersExterminatorEmptyList.add(n);
-            if (n % 2 == 0){
-                testOddNumbersExterminatorEmptyList.add(n);
+        ArrayList<Integer> numbers  = new ArrayList();
+        ArrayList<Integer> expectedResult  = new ArrayList();
+        for (int i = 0; i < 10;i++){
+            numbers.add(i);
+            if(i%2==0) {
+                expectedResult.add(i);
             }
         }
+
+        //When
+        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
+        ArrayList<Integer> result = oddNumbersExterminator.evenNumbers(numbers);
+
         //Then
-        Assert.assertTrue(testOddNumbersExterminatorEmptyList.add( evenNumbers.get(k)) %2 == 0 );
-        k++;
+        Assert.assertEquals(expectedResult, result);
+    }
+    @Test
+    public void testOddNumbersExterminatorEmptyList (){
+
+        //Given
+            ArrayList<Integer> numbers = new ArrayList();
+            ArrayList<Integer> evenNumbers = new ArrayList();
+            for (Integer n : numbers) {
+                if (n % 2 == 0) {
+                    evenNumbers.add(n);
+                }
+            }
+
+        //When
+        OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
+
+        //Then
+        Assert.assertEquals(numbers, evenNumbers);
+
+
+
+
+
     }
 }
-
