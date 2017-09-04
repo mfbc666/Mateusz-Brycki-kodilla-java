@@ -26,10 +26,11 @@ public class StreamMain {
 
         PoemBeautifier poemBeautifier = new PoemBeautifier();
 
-        poemBeautifier.beautify("Poniedziałek.", " Ale już po 17!",(text, textDecorate) -> text + textDecorate );
-        poemBeautifier.beautify("Ala ma kota",".",(text, textDecorate) -> text + textDecorate);
-        poemBeautifier.beautify("TowoT","!!!",(text, textDecorate) ->  textDecorate + text + textDecorate);
-        poemBeautifier.beautify("smallletters"," bigletters",(text, textDecorate) ->   text + textDecorate.toUpperCase());
+        poemBeautifier.beautify("Poniedziałek" , text -> text + " ...ale już po 17!");
+        poemBeautifier.beautify("TEKST DO ZMNIEJSZENIA", txt -> txt.toLowerCase());
+        poemBeautifier.beautify("Ala ma kota", text ->text + "." );
+        poemBeautifier.beautify("TowoT", text -> "!!!" + text + "!!!");
+
 
 
     }
