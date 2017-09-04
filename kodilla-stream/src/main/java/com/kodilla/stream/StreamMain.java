@@ -26,10 +26,8 @@ public class StreamMain {
 
         PoemBeautifier poemBeautifier = new PoemBeautifier();
 
-        poemBeautifier.beautify("Poniedziałek" , text -> text + " ...ale już po 17!");
         poemBeautifier.beautify("TEKST DO ZMNIEJSZENIA", txt -> txt.toLowerCase());
-        poemBeautifier.beautify("Ala ma kota", text ->text + "." );
-        poemBeautifier.beautify("TowoT", text -> "!!!" + text + "!!!");
+        poemBeautifier.beautify("tekst do powiększenia", txt -> txt.toUpperCase());
 
 
 
