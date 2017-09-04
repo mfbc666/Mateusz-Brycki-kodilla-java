@@ -1,4 +1,3 @@
-
 package com.kodilla.testing.collection;
 import org.junit.*;
 
@@ -54,10 +53,5 @@ public class CollectionTestSuite {
 
         //Then
         Assert.assertEquals(numbers, evenNumbers);
-
-
-
-
-
     }
 }
