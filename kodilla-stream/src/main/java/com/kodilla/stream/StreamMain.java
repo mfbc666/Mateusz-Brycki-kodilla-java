@@ -28,6 +28,8 @@ public class StreamMain {
 
         poemBeautifier.beautify("TEKST DO ZMNIEJSZENIA", txt -> txt.toLowerCase());
         poemBeautifier.beautify("tekst do powiększenia", txt -> txt.toUpperCase());
+        poemBeautifier.beautify("test", txt ->"!!! " + txt + " !!!" ) ;
+
 
 
 
