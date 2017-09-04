@@ -20,7 +20,7 @@ public class CollectionTestSuite {
         //Given
         ArrayList<Integer> numbers  = new ArrayList();
         ArrayList<Integer> expectedResult  = new ArrayList();
-        for (int i = 0; i < 10;i++){
+        for (int i = 0; i < 10; i++){
             numbers.add(i);
             if(i%2==0) {
                 expectedResult.add(i);
@@ -40,9 +40,12 @@ public class CollectionTestSuite {
         //Given
             ArrayList<Integer> numbers = new ArrayList();
             ArrayList<Integer> evenNumbers = new ArrayList();
-            for (Integer n : numbers) {
-                if (n % 2 == 0) {
-                    evenNumbers.add(n);
+            /*for (Integer n : numbers) {
+                if (n % 2 == 0)*/
+            for (int n = 0; n <0; n++){
+                    numbers.add(n);
+                    if (n % 2 == 0){
+                        evenNumbers.add(n);
                 }
             }
 
