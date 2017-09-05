@@ -1,54 +1,46 @@
 package com.kodilla.testing.forum.statistics;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
-public class AdvStatistics implements Statistics {
 
 
-/*    List<String> usersNames(); // list of users names
-    int postsCount();          // total quantity of forum posts
-    int commentsCount();       // total quantity of forum comments
-    */
+public class AdvStatistics {
+    int countUsers;
+    int postsCount;
+    int commentsCount;
 
+    public ArrayList<String> userNames(){
+        ArrayList<String> userNames = new ArrayList<String>();
+        userNames.size() = countUsers;
+        return countUsers;
+    }
 
-    class calculateAdvStatistics{
-        private int countUsers;
-        private int postsCount;
-        private int commentsCount;
+    int postsCount(){
+        this.postsCount = postsCount;
+        return this.postsCount;
+    }
 
+    int commentsCount(){
+        this.commentsCount = commentsCount;
+        return this.commentsCount;
+    }
 
-        List<String> userNames(){
-            List<String> userNames = new ArrayList<String>();
-            return usersNames();
-        }
+    int avgPostsPerUser(){
+        return this.postsCount / userNames().size();
+    }
 
-        int postsCount(){
-            this.postsCount = postsCount;
-            return this.postsCount;
-        }
+    int avgCommentsPerUser(){
+        return this.commentsCount / userNames().size();
+    }
 
-        int commentsCount(){
-            this.commentsCount = commentsCount;
-            return this.commentsCount;
+    int avgCommentsPerPost(){
+        return this.commentsCount / this.postsCount;
+    }
 
-        }
-
-        int avgPostsPerUser(){
-            return this.postsCount / userNames().size();
-        }
-
-        int avgCommentsPerUser(){
-            return this.commentsCount / userNames().size();
-        }
-
-        int avgCommentsPerPost(){
-            return this.commentsCount / this.postsCount;
-        }
-
+    public void calculateAdvStatistics(Statistics statistics){
 
 
 
     }
+
 }
+
