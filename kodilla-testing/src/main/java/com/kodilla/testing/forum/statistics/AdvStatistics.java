@@ -4,42 +4,29 @@ import java.util.ArrayList;
 
 
 public class AdvStatistics {
-    int countUsers;
-    int postsCount;
-    int commentsCount;
 
-    public ArrayList<String> userNames(){
-        ArrayList<String> userNames = new ArrayList<String>();
-        userNames.size() = countUsers;
-        return countUsers;
-    }
-
-    int postsCount(){
-        this.postsCount = postsCount;
-        return this.postsCount;
-    }
-
-    int commentsCount(){
-        this.commentsCount = commentsCount;
-        return this.commentsCount;
-    }
-
-    int avgPostsPerUser(){
-        return this.postsCount / userNames().size();
-    }
-
-    int avgCommentsPerUser(){
-        return this.commentsCount / userNames().size();
-    }
-
-    int avgCommentsPerPost(){
-        return this.commentsCount / this.postsCount;
-    }
+    int numberOfUsers;
+    int numberOfPosts;
+    int numberOfComments;
+    int avgNumberOfCommentsPerUser;
+    int avgNumberOfCommentsPerPost;
 
     public void calculateAdvStatistics(Statistics statistics){
 
+        numberOfUsers = statistics.usersNames().size();
+        numberOfPosts = statistics.postsCount();
+        numberOfComments = statistics.commentsCount();
+        avgNumberOfCommentsPerUser = statistics.commentsCount()/statistics.usersNames().size();
+        avgNumberOfCommentsPerPost = statistics.commentsCount()/statistics.postsCount();
 
+    }
 
+    public void ShowStatistics(){
+        System.out.println("Number of Users " + numberOfUsers);
+        System.out.println("Number of Posts" + numberOfPosts);
+        System.out.println("Number of Comments" + numberOfComments);
+        System.out.println("Avg number of Comments per User " + avgNumberOfCommentsPerUser);
+        System.out.println("Avg number of Comments per Post" + avgNumberOfCommentsPerPost);
     }
 
 }
