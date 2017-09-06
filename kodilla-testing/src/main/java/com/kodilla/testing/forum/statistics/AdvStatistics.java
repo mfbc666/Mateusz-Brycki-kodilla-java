@@ -13,7 +13,6 @@ public class AdvStatistics {
 
     public void calculateAdvStatistics(Statistics statistics){
 
-
         numberOfUsers = statistics.usersNames().size();
         numberOfPosts = statistics.postsCount();
         numberOfComments = statistics.commentsCount();
