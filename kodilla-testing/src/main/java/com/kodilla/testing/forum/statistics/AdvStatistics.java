@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 
 public class AdvStatistics {
-
     int numberOfUsers;
     int numberOfPosts;
     int numberOfComments;
@@ -12,13 +11,11 @@ public class AdvStatistics {
     int avgNumberOfCommentsPerPost;
 
     public void calculateAdvStatistics(Statistics statistics){
-
         numberOfUsers = statistics.usersNames().size();
         numberOfPosts = statistics.postsCount();
         numberOfComments = statistics.commentsCount();
         avgNumberOfCommentsPerUser = statistics.commentsCount()/statistics.usersNames().size();
         avgNumberOfCommentsPerPost = statistics.commentsCount()/statistics.postsCount();
-
     }
 
     public void ShowStatistics(){
@@ -28,6 +25,5 @@ public class AdvStatistics {
         System.out.println("Avg number of Comments per User " + avgNumberOfCommentsPerUser);
         System.out.println("Avg number of Comments per Post" + avgNumberOfCommentsPerPost);
     }
-
 }
 
