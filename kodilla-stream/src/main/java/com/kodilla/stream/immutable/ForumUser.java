@@ -17,8 +17,8 @@ public final class ForumUser {
         return realName;
     }
 
-    //Checking if created class is immutable
-    /*public void modifyUserName(String modifiedName){
+    /*//Checking if created class is immutable
+    public void modifyUserName(String modifiedName){
         username = modifiedName;
     }*/
 }
