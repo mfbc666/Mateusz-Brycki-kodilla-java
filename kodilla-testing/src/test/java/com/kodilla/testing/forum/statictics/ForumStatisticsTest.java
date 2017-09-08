@@ -22,20 +22,22 @@ public class ForumStatisticsTest {
     public void setUp(){
         statisticsMock = mock(Statistics.class);
         target = new AdvStatistics();
+        statisticsMock.usersNames().add("user1");
+        statisticsMock.usersNames().add("user2");
     }
 
     @Test
     public void forumStatisticsWithMock(){
         //Given
         when(statisticsMock.commentsCount()).thenReturn(1000);
-        when(statisticsMock.usersNames()).thenReturn(Collections.singletonList("user"));
+        when(statisticsMock.usersNames()).thenReturn(statisticsMock.usersNames().size());
         /*when(statisticsMock.postsCount()).thenReturn(7);*/
 
         //When
         target.calculateAdvStatistics(statisticsMock);
 
         //Then
-        assertEquals(1000, target.getAvgNumberOfCommentsPerUser());
+        assertEquals(500, target.getAvgNumberOfCommentsPerUser());
         /*assertEquals(5, target.getNumberOfPosts());
         assertEquals(7, target.getNumberOfComments());*/
 
