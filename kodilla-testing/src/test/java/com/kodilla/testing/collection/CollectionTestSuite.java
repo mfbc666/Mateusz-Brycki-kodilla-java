@@ -2,6 +2,8 @@ package com.kodilla.testing.collection;
 import org.junit.*;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 
 public class CollectionTestSuite {
     @Before
@@ -14,7 +16,7 @@ public class CollectionTestSuite {
         System.out.println("End : Test of Odd number exterminate engine");
     }
     @Test
-    public void testOddNumbersExterminatorList (){
+    public void testOddNumbersExterminatorEmptyList (){
 
         //Given
         ArrayList<Integer> numbers  = new ArrayList();
@@ -34,19 +36,18 @@ public class CollectionTestSuite {
         Assert.assertEquals(expectedResult, result);
     }
     @Test
-    public void testOddNumbersExterminatorEmptyList (){
+    public void testOddNumbersExterminatorFilledList (){
 
         //Given
-            ArrayList<Integer> numbers = new ArrayList();
-            ArrayList<Integer> evenNumbers = new ArrayList();
-            /*for (Integer n : numbers) {
-                if (n % 2 == 0)*/
-            for (int n = 0; n <0; n++){
-                    numbers.add(n);
-                    if (n % 2 == 0){
-                        evenNumbers.add(n);
-                }
+        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1,2,3,4,5));
+        Iterator eachNumber = numbers.iterator();
+        int k = (Integer)eachNumber.next();
+        ArrayList<Integer> evenNumbers = new ArrayList();
+        for ( int l = 0; l < numbers.size();l++){
+            if(k % 2 == 0){
+                evenNumbers.add(k);
             }
+        }
 
         //When
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
