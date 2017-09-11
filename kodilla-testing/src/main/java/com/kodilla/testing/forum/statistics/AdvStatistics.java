@@ -16,7 +16,7 @@ public class AdvStatistics {
         numberOfUsers = statistics.usersNames().size();
         numberOfPosts = statistics.postsCount();
         numberOfComments = statistics.commentsCount();
-        avgNumberOfCommentsPerUser = statistics.commentsCount() / statistics.usersNames().size();
+        avgNumberOfCommentsPerUser = statistics.commentsCount() / statistics.userCount();
         avgNumberOfCommentsPerPost = statistics.commentsCount() / statistics.postsCount();
     }
     public AdvStatistics() {
