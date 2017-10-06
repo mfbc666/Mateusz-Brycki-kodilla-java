@@ -3,8 +3,14 @@ package com.kodilla.stream.forumuser;
 public class StreamMain {
     public static void main(String[] args) {
         Forum forum = new Forum();
-        forum.getUserList().stream();
-                .filter(s -> s.)
+        forum.getUserList().stream()
+                .filter(fu -> fu.getSex() == 'M')
+                .filter(fu -> fu.getDateOfBirth().getYear() <= 1997)
+                //dodać filter posts
+                .forEach(System.out::println);
+
+
+
 
                  /*
                 .map(String::toUpperCase)
