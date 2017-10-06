@@ -37,24 +37,14 @@ public class CollectionTestSuite {
     }
     @Test
     public void testOddNumbersExterminatorFilledList (){
-
         //Given
-        ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1,2,3,4,5));
-        Iterator eachNumber = numbers.iterator();
-        int k = (Integer)eachNumber.next();
-        ArrayList<Integer> evenNumbers = new ArrayList();
-        for ( int l = 0; l < numbers.size();l++){
-            if(k % 2 == 0){
-                evenNumbers.add(k);
-            }
-        }
-
-        //When
+        ArrayList<Integer> numbers = new ArrayList<>();
         OddNumbersExterminator oddNumbersExterminator = new OddNumbersExterminator();
 
+        //When
+        ArrayList<Integer> resultList = oddNumbersExterminator.evenNumbers(numbers);
+
         //Then
-        Assert.assertEquals(numbers, evenNumbers);
-
+        Assert.assertEquals(0, resultList.size());
     }
-
 }
