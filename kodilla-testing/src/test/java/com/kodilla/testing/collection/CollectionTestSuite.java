@@ -54,6 +54,7 @@ public class CollectionTestSuite {
 
         //Then
         Assert.assertEquals(numbers, evenNumbers);
+
     }
 
 }
