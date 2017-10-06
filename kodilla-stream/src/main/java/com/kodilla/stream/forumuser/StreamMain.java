@@ -6,7 +6,7 @@ public class StreamMain {
         forum.getUserList().stream()
                 .filter(fu -> fu.getSex() == 'M')
                 .filter(fu -> fu.getDateOfBirth().getYear() <= 1997)
-                //dodać filter posts
+                .filter(fu -> fu.getPostsCount() <= 20000)
                 .forEach(System.out::println);
 
 
