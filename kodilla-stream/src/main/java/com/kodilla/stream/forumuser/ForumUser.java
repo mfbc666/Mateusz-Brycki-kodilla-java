@@ -42,6 +42,7 @@ public final class ForumUser {
     public String toString(){
         return  "Forum User " + userName + ", user ID : " + userId + ", sex: " + sex + ", date of birth " + dateOfBirth + "number of posts " + postsCount;
     }
+
 }
 
 
