@@ -3,16 +3,15 @@ package com.kodilla.stream.World;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class World extends Country  {
+public final class World  {
 
-    public static List<String> World(){
-        final List<String>World = new ArrayList<>();
-        World.add("Europa");
-        World.add("Asia");
-        World.add("Australia");
+    public List<Continent> continentList = new ArrayList<>();
 
-        return new ArrayList<String>(World);
+    public void addContinent(Continent continent){
+        continentList.add(continent);
     }
 
-    Country
 }
+
+
+
