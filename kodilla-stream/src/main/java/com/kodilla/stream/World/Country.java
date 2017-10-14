@@ -27,7 +27,7 @@ public final class Country {
                 ", CountryPeopleQuantity=" + countryPeopleQuantity +
                 '}';
     }
-    public BigDecimal getPeopleQuantity(){
+    public final BigDecimal getPeopleQuantity(){
         BigDecimal peopleQuantity = new BigDecimal(countryPeopleQuantity);
         return peopleQuantity;
     }
