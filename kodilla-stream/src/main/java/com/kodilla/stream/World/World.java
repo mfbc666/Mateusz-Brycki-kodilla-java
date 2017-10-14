@@ -11,6 +11,9 @@ public final class World  {
         continentList.add(continent);
     }
 
+    public List<Continent> getContinentList() {
+        return continentList;
+    }
 }
 
 

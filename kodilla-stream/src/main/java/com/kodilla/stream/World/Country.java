@@ -4,31 +4,31 @@ import java.math.BigDecimal;
 import java.util.Set;
 
 public final class Country {
-    private final String CountryName;
-    private final int CountryPeopleQuantity;
+    private final String countryName;
+    private final int countryPeopleQuantity;
 
     public Country(String countryName, int countryPeopleQuantity) {
-        CountryName = countryName;
-        CountryPeopleQuantity = countryPeopleQuantity;
+        this.countryName = countryName;
+        this.countryPeopleQuantity = countryPeopleQuantity;
     }
 
     public String getCountryName() {
-        return CountryName;
+        return countryName;
     }
 
     public int getCountryPeopleQuantity() {
-        return CountryPeopleQuantity;
+        return countryPeopleQuantity;
     }
 
     @Override
     public String toString() {
         return "Country{" +
-                "CountryName='" + CountryName + '\'' +
-                ", CountryPeopleQuantity=" + CountryPeopleQuantity +
+                "CountryName='" + countryName + '\'' +
+                ", CountryPeopleQuantity=" + countryPeopleQuantity +
                 '}';
     }
     public BigDecimal getPeopleQuantity(){
-        BigDecimal peopleQuantity = new BigDecimal(CountryPeopleQuantity);
+        BigDecimal peopleQuantity = new BigDecimal(countryPeopleQuantity);
         return peopleQuantity;
     }
 

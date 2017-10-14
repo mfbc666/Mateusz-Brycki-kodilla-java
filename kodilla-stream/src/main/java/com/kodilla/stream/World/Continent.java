@@ -10,6 +10,10 @@ public final class Continent {
     public void addCountry(Country country){
         listContinentCountries.add(country);
     }
+
+    public List<Country> getListContinentCountries() {
+        return listContinentCountries;
+    }
 }
 
 
