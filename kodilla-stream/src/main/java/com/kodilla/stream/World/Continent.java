@@ -14,6 +14,12 @@ public final class Continent {
     public List<Country> getListContinentCountries() {
         return listContinentCountries;
     }
+
+    public int getNumberofPeople(){
+        return listContinentCountries.stream()
+            .map( country -> country.getCountryPeopleQuantity())
+            .reduce(0, (a, b) -> a + b);
+        }
 }
 
 
