@@ -14,13 +14,17 @@ public final class World  {
     public List<Continent> getContinentList() {
         return continentList;
     }
-    public BigDecimal getNumberOfPeople() {
+
+    public Integer getNumberOfPeople() {
         return continentList.stream()
-                .map(continent -> continent.listContinentCountries)
-                .flatMap(countries -> countries.stream())
+                .map(continent -> continent.getNumberofPeople())
                 .reduce(0, (a, b) -> a + b);
     }
 }
 
 
-
+   /* public int getNumberofPeople(){
+        return listContinentCountries.stream()
+                .map( country -> country.getCountryPeopleQuantity())
+                .reduce(0, (a, b) -> a + b);
+    }
