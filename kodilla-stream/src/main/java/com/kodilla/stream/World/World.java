@@ -27,4 +27,4 @@ public final class World  {
         return listContinentCountries.stream()
                 .map( country -> country.getCountryPeopleQuantity())
                 .reduce(0, (a, b) -> a + b);
-    }
+    }*/
