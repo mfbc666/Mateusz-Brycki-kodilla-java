@@ -1,20 +1,12 @@
 package com.kodilla.exception.test;
 
-import java.net.NoRouteToHostException;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class AirportsCollector {
-    public void departureAirportNameException(String departureAirport) throws Exception {
-        try{
-            departureAirport.equals(null);
-        }catch(Exception RouteNotFoundException){
-            System.out.println("Departure Airport name cannot be null");
-        }
 
-    }
-
-    public static void main(String[] args) {
+    public static HashMap<String, Boolean> getCollection() {
         HashMap<String, Boolean> airportMap = new HashMap<String, Boolean>();
         airportMap.put("Okęcie", true);
         airportMap.put("Wrocław", true);
@@ -24,12 +16,41 @@ public class AirportsCollector {
         airportMap.put("Nieznajowa", true);
         airportMap.put("Lwów", true);
         airportMap.put("Radom", false);
+        return airportMap;
+    }
 
-        AirportsCollector airportsCollector = new AirportsCollector();
-        String departureAirport;
+    public static void main(String[] args) {
+        String departure;
+        String arrival;
 
-        String departureAirport = airportsCollector.departureAirportNameException();
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("please type departure airport");
+        departure = scanner.nextLine();
+
+        System.out.println("");
+
+        System.out.println("please type departure airport");
+        arrival = scanner.nextLine();
+
+        if(getCollection().containsKey(departure)){
+            System.out.println("Departure airport choosen");
+        } else System.out.println("Departure airport not found");
+
+        if(getCollection().containsKey(arrival)){
+            System.out.println("Arrival airport choosen");
+        } else {
+            System.out.println("Arrival airport not found");
+        }
+
+        if(Boolean.TRUE.equals(getCollection().containsKey(arrival))){
+            System.out.println("route available");
+        } else {
+            System.out.println("route not available");
+        }
 
     }
+
+
+
 }
 
