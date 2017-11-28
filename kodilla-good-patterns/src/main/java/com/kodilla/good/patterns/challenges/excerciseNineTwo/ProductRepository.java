@@ -7,12 +7,12 @@ import java.util.Map;
 
 public class ProductRepository {
 
-    Map<Integer, String> Product = new HashMap<Integer, String>();
+    Map<String, Integer> Product = new HashMap<String, Integer>();
 
     public ProductRepository() {
-        Product.put(100, "Xiaomi Redmi 4X");
-        Product.put(12, "Rekuperator wewnątrzścienny");
-        Product.put(66, "Witcher III");
+        Product.put("Xiaomi Redmi 4X", 100);
+        Product.put("Rekuperator wewnątrzścienny", 12);
+        Product.put("Witcher III",22);
     }
 
 }
