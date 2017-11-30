@@ -15,7 +15,7 @@ public class OrderDTO {
         return user;
     }
 
-    public boolean isSold(){
+    public boolean isSold() {
         return isSold;
     }
 }
