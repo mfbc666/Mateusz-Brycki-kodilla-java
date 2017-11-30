@@ -8,7 +8,7 @@ public class OrderRequest {
     public String productName;
     public int productQuantity;
 
-    public OrderRequest(final User user, final String productName, final int productQuantity) {
+    public OrderRequest(final User user, String productName, int productQuantity) {
         this.user = user;
         this.productName = productName;
         this.productQuantity = productQuantity;
